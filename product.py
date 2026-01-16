@@ -1,3 +1,4 @@
+# Модель для товаров (ООП)
 class Product:
     def __init__(self, name: str, price: int):
         self.name = name
