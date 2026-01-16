@@ -9,7 +9,7 @@ class Storage:
     def read_all(self):
         products = []
         try:
-            with open(self.filename, "r", encoding='utf=8') as f:
+            with open(self.filename, "r", encoding='utf-8') as f:
                 for line in f:
                     if line.strip():
                         products.append(Product.from_line(line))
@@ -18,6 +18,6 @@ class Storage:
         return products
 
     def write_all(self, products):
-        with open(self.filename, "w", encoding='utf=8') as f:
+        with open(self.filename, "w", encoding='utf-8') as f:
             for product in products:
                 f.write(product.to_line() + "\n")
